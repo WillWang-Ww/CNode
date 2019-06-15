@@ -16,30 +16,31 @@
 
 <script>
 export default{
-  name: 'header'
+  name: 'PageHeader'
 }
 </script>
 <style scoped>
   #Header{
-    background-color: #333;
+    background-color: #444444;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
   }
   .logo{
-    margin-left: 30px;
+    margin-left: 50px;
    }
   a{
     text-decoration: none;
-    color:#999;
+    color:#b4b6ab;
     margin: 0px 10px;
     word-break: keep-all;
+    font-size: 13px;
   }
   ul{
     list-style-type: none;
     display: flex;
     flex-wrap: nowrap;
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 100px;
   }
 </style>

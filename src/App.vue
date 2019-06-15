@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <PageHeader></PageHeader>
+    <MainList></MainList>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
+import PageHeader from './components/PageHeader'
+import MainList from './components/MainList'
 export default {
   name: 'App',
   components: {
-    Header
+    PageHeader,MainList
   }
 }
 </script>
