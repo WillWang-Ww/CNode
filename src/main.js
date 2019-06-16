@@ -9,12 +9,7 @@ Vue.prototype.$http = Axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: {App},
-  template: '<App/>'
-})
+
 
 //Post tags in main page filter
 Vue.filter('tabFilter', function (post) {
@@ -26,8 +21,10 @@ Vue.filter('tabFilter', function (post) {
     return '问答'
   } else if (post.tab === 'share') {
     return '分享'
-  } else {
+  } else if (post.tab === 'job'){
     return '招聘'
+  }else{
+    return ''
   }
 })
 
@@ -53,4 +50,11 @@ Vue.filter('timeFilter', function (str) {
   }else if (time/31536000000<60){
     return parseInt(time/31536000000)+'年前'
   }
+})
+
+new Vue({
+  el: '#app',
+  router,
+  components: {App},
+  template: '<App/>'
 })

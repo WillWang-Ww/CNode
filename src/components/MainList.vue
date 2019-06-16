@@ -20,7 +20,13 @@
             {{post | tabFilter}}
           </div>
         </div>
-        <p class="title">{{post.title}}</p>
+        <router-link :to="{
+          name:'post_content',
+          params:{id:post.id}
+        }" class="link">
+          <p class="title">{{post.title}}</p>
+        </router-link>
+
         <div class="time">
           {{post.last_reply_at | timeFilter}}
         </div>
@@ -94,7 +100,13 @@
     border-radius: 3px;
     margin: 0px 10px;
   }
-
+  .link{
+    text-decoration: none;
+  }
+  .title{
+    text-decoration: none;
+    color: black;
+  }
   .avatar {
     width: 30px;
     height: 30px;
