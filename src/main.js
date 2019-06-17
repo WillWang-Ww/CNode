@@ -24,7 +24,7 @@ Vue.filter('tabFilter', function (post) {
   } else if (post.tab === 'job'){
     return '招聘'
   }else{
-    return ''
+    return '问答'
   }
 })
 
