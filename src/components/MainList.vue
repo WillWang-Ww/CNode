@@ -10,7 +10,14 @@
         <a href="#">客户端测试</a>
       </div>
       <li v-for="post in posts" class="postCard">
-        <img :src="post.author.avatar_url" alt="" class="avatar">
+        <router-link :to="{
+            name:'user_info',
+            params:{
+              name:post.author.loginname
+            }
+          }">
+          <img :src="post.author.avatar_url" alt="" class="avatar">
+        </router-link>
         <div class="countMessage">
           <span class="reply">{{post.reply_count}}</span><span class="visit">/{{post.visit_count}}</span>
         </div>

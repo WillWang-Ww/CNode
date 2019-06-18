@@ -23,10 +23,24 @@
       <div class="reply">
         <div class="topBar">{{post.reply_count}}回复</div>
         <div class="replyCard" v-for="(reply,index) in post.replies">
-          <img :src="reply.author.avatar_url" alt="" class="avatar">
+          <router-link :to="{
+            name:'user_info',
+            params:{
+              name:reply.author.loginname
+            }
+          }">
+            <img :src="reply.author.avatar_url" alt="" class="avatar">
+          </router-link>
          <div class="cardInfo">
            <div class="replyTitle">
-             <div class="loginname">{{reply.author.loginname}}</div>
+             <router-link :to="{
+            name:'user_info',
+            params:{
+              name:reply.author.loginname
+            }
+          }">
+               <div class="loginname">{{reply.author.loginname}}</div>
+             </router-link>
              <div>{{index}}楼</div>
              <div>{{reply.create_at | timeFilter}}</div>
              <img src="../assets/up.png" alt="" class="upIcon">
