@@ -8,12 +8,32 @@
         </router-link>
       </div>
       <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">新手入门</a></li>
-        <li><a href="#">API</a></li>
-        <li><a href="#">关于</a></li>
-        <li><a href="#">注册</a></li>
-        <li><a href="#">登录</a></li>
+        <router-link :to="{
+            name:'root',
+          }">
+          <li><a href="#" class="aTags">首页</a></li>
+        </router-link>
+        <router-link :to="{
+            name:'root',
+          }">
+          <li><a href="#" class="aTags">新手入门</a></li>
+        </router-link><router-link :to="{
+            name:'root',
+          }">
+        <li><a href="#" class="aTags">API</a></li>
+      </router-link><router-link :to="{
+            name:'root',
+          }">
+        <li><a href="#" class="aTags">关于</a></li>
+      </router-link><router-link :to="{
+            name:'root',
+          }">
+        <li><a href="#" class="aTags">注册</a></li>
+      </router-link><router-link :to="{
+            name:'root',
+          }">
+        <li><a href="#" class="aTags">登录</a></li>
+      </router-link>
       </ul>
     </div>
 </template>
@@ -33,12 +53,16 @@ export default{
   .logo{
     margin-left: 50px;
    }
-  a{
+  .aTags{
     text-decoration: none;
     color:#b4b6ab;
     margin: 0px 10px;
     word-break: keep-all;
     font-size: 13px;
+  }
+
+  li{
+    text-decoration: none;
   }
   ul{
     list-style-type: none;
