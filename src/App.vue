@@ -9,11 +9,12 @@
 import PageHeader from './components/PageHeader'
 import MainList from './components/MainList'
 import Article from './components/Article'
+import UserInfo from  './components/UserInfo'
 
 export default {
   name: 'App',
   components: {
-    PageHeader,MainList,Article
+    PageHeader,MainList,Article,UserInfo
   }
 }
 </script>

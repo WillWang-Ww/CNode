@@ -1,7 +1,11 @@
 <template>
     <div id="Header">
       <div class="logo">
-        <img class="logo" src="../assets/cnodejs_light.png" alt="Logo">
+        <router-link :to="{
+            name:'root',
+          }">
+          <img class="logo" src="../assets/cnodejs_light.png" alt="Logo">
+        </router-link>
       </div>
       <ul>
         <li><a href="#">首页</a></li>
