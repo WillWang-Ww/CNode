@@ -22,7 +22,7 @@
       </div>
       <div class="reply">
         <div class="topBar">{{post.reply_count}}回复</div>
-        <div class="replyCard" v-for="(reply,index) in post.replies">
+       <div class="replyCard" v-for="(reply,index) in post.replies">
           <router-link :to="{
             name:'user_info',
             params:{
@@ -79,16 +79,17 @@ export default {
   @import url('../assets/markdown-github.css');
   .content{
     background-color: white;
-    margin:0px 100px;
-    margin-top: 25px;
+    margin-left: 200px;
+    margin-top: 20px;
     font-size: 12px;
     padding-bottom: 36px;
   }
   .reply{
     background-color: white;
-    margin:0px 100px;
-    margin-top: 25px;
+    margin-left: 200px;
+    margin-top: 20px;
     font-size: 12px;
+    padding-bottom: 36px;
   }
   .head{
     border-bottom: 1px solid #c7c7c7;

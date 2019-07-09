@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <PageHeader></PageHeader>
-    <router-view name="main"></router-view>
+    <div class="main">
+      <router-view name="main"></router-view>
+    <router-view name="SlideBar"></router-view>
+    </div>
   </div>
 </template>
 
@@ -10,16 +13,18 @@ import PageHeader from './components/PageHeader'
 import MainList from './components/MainList'
 import Article from './components/Article'
 import UserInfo from  './components/UserInfo'
+import SlideBar from './components/SlideBar'
 
 export default {
   name: 'App',
   components: {
-    PageHeader,MainList,Article,UserInfo
+    PageHeader,MainList,Article,UserInfo,SlideBar
   }
 }
 </script>
 
 <style>
-#app {
+.main{
+  display: flex;
 }
 </style>

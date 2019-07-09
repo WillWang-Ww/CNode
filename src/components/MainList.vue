@@ -9,7 +9,7 @@
         <a href="#">招聘</a>
         <a href="#">客户端测试</a>
       </div>
-      <li v-for="post in posts" class="postCard">
+      <li v-for="post in posts" class="postCard" :key="post">
         <router-link :to="{
             name:'user_info',
             params:{
@@ -29,7 +29,7 @@
         </div>
         <router-link :to="{
           name:'post_content',
-          params:{id:post.id}
+          params:{id:post.id,name:post.author.loginname}
         }" class="link">
           <p class="title">{{post.title}}</p>
         </router-link>

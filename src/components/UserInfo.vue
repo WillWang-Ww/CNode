@@ -17,7 +17,7 @@
     <div class="creatTopic">
       <div class="topNav">最近创建的话题</div>
       <ul>
-        <li v-for="items in userinfo.recent_topics" class="listStyle postCard">
+        <li v-for="items in userinfo.recent_topics" class="listStyle postCard" :key="items">
           <router-link :to="{name:'post_content',params:{id:items.id}}" class="aLink">
             <p class="title listStyle">{{items.title}}</p>
           </router-link>
@@ -27,7 +27,7 @@
     <div class="joinTopic">
       <div class="topNav">最近参与的话题</div>
       <ul>
-        <li v-for="items in userinfo.recent_replies" class="listStyle postCard">
+        <li v-for="items in userinfo.recent_replies" class="listStyle postCard" :key="items">
           <router-link :to="{name:'post_content',params:{id:items.id}}" class="aLink">
             <p class="title">{{items.title}}</p>
           </router-link>
