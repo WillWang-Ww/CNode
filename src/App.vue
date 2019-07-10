@@ -2,7 +2,7 @@
   <div id="app">
     <PageHeader></PageHeader>
     <div class="main">
-      <router-view name="main"></router-view>
+    <router-view name="main"></router-view>
     <router-view name="SlideBar"></router-view>
     </div>
   </div>
@@ -26,5 +26,6 @@ export default {
 <style>
 .main{
   display: flex;
+  width: 100vw;
 }
 </style>

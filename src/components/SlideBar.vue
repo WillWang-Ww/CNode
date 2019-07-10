@@ -45,10 +45,11 @@ export default {
 </script>
 <style scoped>
 .slidebar{
-    width:400px;
+    width:16vw;
     margin-right: 200px;
     margin-left: 25px;
     margin-top: 20px;
+    flex-shrink: 0;
 }
 .topBar{
     color: #333333;

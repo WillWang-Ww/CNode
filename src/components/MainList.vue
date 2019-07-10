@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
-    <ul class="list">
-      <div class="topNav">
+  <div class="ml_main">
+    <ul class="ml_list">
+      <div class="ml_topNav">
         <a href="#">全部</a>
         <a href="#">精华</a>
         <a href="#">分享</a>
@@ -9,19 +9,19 @@
         <a href="#">招聘</a>
         <a href="#">客户端测试</a>
       </div>
-      <li v-for="post in posts" class="postCard" :key="post">
+      <li v-for="post in posts" class="ml_postCard" :key="post">
         <router-link :to="{
             name:'user_info',
             params:{
               name:post.author.loginname
             }
           }">
-          <img :src="post.author.avatar_url" alt="" class="avatar">
+          <img :src="post.author.avatar_url" alt="" class="ml_avatar">
         </router-link>
-        <div class="countMessage">
-          <span class="reply">{{post.reply_count}}</span><span class="visit">/{{post.visit_count}}</span>
+        <div class="ml_countMessage">
+          <span class="ml_reply">{{post.reply_count}}</span><span class="ml_visit">/{{post.visit_count}}</span>
         </div>
-        <div class="pingInfo">
+        <div class="ml_pingInfo">
           <div
             :class="[{goodStyle:(post.good === true)},{topStyle:(post.top === true)},{tabStyle: post.good !== true && post.top !== true}]">
             {{post | tabFilter}}
@@ -31,10 +31,10 @@
           name:'post_content',
           params:{id:post.id,name:post.author.loginname}
         }" class="link">
-          <p class="title">{{post.title}}</p>
+          <p class="ml_title">{{post.title}}</p>
         </router-link>
 
-        <div class="time">
+        <div class="ml_time">
           {{post.last_reply_at | timeFilter}}
         </div>
       </li>
@@ -68,18 +68,18 @@
   }
 </script>
 <style scoped>
-  .main {
+  .ml_main {
     margin-left: 100px;
     margin-top: 15px;
   }
 
-  .topNav {
+  .ml_topNav {
     background-color: #f6f6f6;
     height: 50px;
     display: flex;
     align-items: center;
   }
-  .topNav > a{
+  .ml_topNav > a{
     text-decoration: none;
     font-size: 14px;
     color: #80bd01;
@@ -88,7 +88,7 @@
     margin: 0px 10px;
   }
 
-  .topNav > a:first-child {
+  .ml_topNav > a:first-child {
     text-decoration: none;
     font-size: 14px;
     background-color: #80bd01;
@@ -98,7 +98,7 @@
     margin: 0px 10px;
   }
 
-  .topNav > a:hover {
+  .ml_topNav > a:hover {
     text-decoration: none;
     font-size: 14px;
     background-color: #80bd01;
@@ -107,41 +107,42 @@
     border-radius: 3px;
     margin: 0px 10px;
   }
-  .link{
+  .ml_link{
     text-decoration: none;
   }
-  .title{
+  .ml_title{
     text-decoration: none;
     color: black;
   }
-  .avatar {
+  .ml_avatar {
     width: 30px;
     height: 30px;
     margin: 0px 15px;
   }
 
-  .list {
+  .ml_list {
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 90vw;
   }
 
-  .countMessage {
+  .ml_countMessage {
     width: 70px;
     text-align: center;
   }
 
-  .reply {
+  .ml_reply {
     font-size: 15px;
     color: #a38aa3;
   }
 
-  .visit {
+  .ml_visit {
     font-size: 8px;
     color: #c7c7c7;
   }
 
-  .postCard {
+  .ml_postCard {
     background-color: #ffffff;
     display: flex;
     align-items: center;
@@ -149,15 +150,19 @@
     border-top: 1px solid #f6f6f6;
   }
 
-  .postCard:hover{
+  .ml_postCard > a{
+    text-decoration: none;
+  }
+
+  .ml_postCard:hover{
     background-color: #f6f6f6;
   }
 
-  .postCard:last-child {
+  .ml_postCard:last-child {
     border-radius: 3px;
   }
 
-  .goodStyle {
+  .ml_goodStyle {
     font-size: 12px;
     background-color: #80bd01;
     color: #ffffff;
@@ -166,7 +171,7 @@
     margin: 0px 3px;
   }
 
-  .topStyle {
+  .ml_topStyle {
     font-size: 12px;
     background-color: #80bd01;
     color: #ffffff;
@@ -175,7 +180,7 @@
     margin: 0px 3px;
   }
 
-  .tabStyle {
+  .ml_tabStyle {
     background-color: #e5e5e5;
     font-size: 12px;
     color: #999999;
@@ -184,7 +189,7 @@
     margin: 0px 3px;
   }
 
-  .time {
+  .ml_time {
     margin-left: auto;
     margin-right: 12px;
     font-size: 12px;

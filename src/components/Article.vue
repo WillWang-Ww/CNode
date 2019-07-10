@@ -1,5 +1,5 @@
 <template>
-    <div class="article">
+    <div class="ar_article">
       <div class="content">
         <div class="head">
           <div class="headTitle">
@@ -75,14 +75,18 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
   @import url('../assets/markdown-github.css');
+  .ar_article{
+    width: 70vw;
+  }
   .content{
     background-color: white;
     margin-left: 200px;
     margin-top: 20px;
     font-size: 12px;
     padding-bottom: 36px;
+    flex-shrink: 1;
   }
   .reply{
     background-color: white;
